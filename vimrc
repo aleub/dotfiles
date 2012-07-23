@@ -75,6 +75,16 @@ function! StripWhitespace ()
 endfunction
 noremap <leader>ss :call StripWhitespace ()<CR>
 
+let coffee_make_options = '--bare -o ../dist/'
+
+colorscheme solarized
+set guifont=Consolas\ 11
+set guioptions-=T
+set guioptions-=t
+set guioptions-=m
+map <F1> :bp<CR>
+map <F2> :bn<CR>
+
 call pathogen#infect()
 set background=dark
 colorscheme solarized
