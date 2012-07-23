@@ -63,6 +63,8 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace ()
 	let save_cursor = getpos(".")
