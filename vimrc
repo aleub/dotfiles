@@ -30,6 +30,8 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+" Expand Tab to spaces
+set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
@@ -63,6 +65,7 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" .pde arduino file syntax
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
 " Strip trailing whitespace (,ss)
@@ -77,14 +80,18 @@ noremap <leader>ss :call StripWhitespace ()<CR>
 
 let coffee_make_options = '--bare -o ../dist/'
 
-colorscheme solarized
-set guifont=Consolas\ 11
-set guioptions-=T
-set guioptions-=t
-set guioptions-=m
-map <F1> :bp<CR>
-map <F2> :bn<CR>
-
+" get all .vim/bundle items
 call pathogen#infect()
+
 set background=dark
 colorscheme solarized
+" Set a nice Font
+set guifont=Consolas\ 11
+" no gui toolbar
+set guioptions-=T
+set guioptions-=t
+" no menu
+set guioptions-=m
+" easy buffer navigation
+map <F1> :bp<CR>
+map <F2> :bn<CR>
