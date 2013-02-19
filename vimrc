@@ -8,6 +8,7 @@ set esckeys
 set ttyfast
 " Add the g flag to search/replace by default
 set gdefault
+filetype plugin on
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 " Change mapleader
@@ -16,12 +17,8 @@ let mapleader=","
 set binary
 set noeol
 " Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-  set undodir=~/.vim/undo
-endif
-
+set nobackup
+set noswapfile
 " Enable line numbers
 set number
 " Enable syntax highlighting
@@ -30,6 +27,8 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 " Expand Tab to spaces
 set expandtab
 " Show “invisible” characters
@@ -65,8 +64,8 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" .pde arduino file syntax
-autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
+".pde arduino file syntax
+"autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace ()
@@ -86,7 +85,19 @@ call pathogen#infect()
 set background=dark
 colorscheme solarized
 " Set a nice Font
-set guifont=Consolas\ 11
+set guifont=Consolas
+
+let g:Powerline_symbols='compatible'
+if has("gui_gtk2")
+"let g:Powerline_symbols='fancy'
+"  set guifont=Consolas\ for\ Powerline\ 11
+  set guifont=Source\ Code\ Pro\ 11
+elseif has("gui_macvim")
+    set guifont=Consolas:h12
+elseif has("gui_win32")
+    set guifont=Consolas:h11
+end
+
 " no gui toolbar
 set guioptions-=T
 set guioptions-=t
@@ -95,3 +106,10 @@ set guioptions-=m
 " easy buffer navigation
 map <F1> :bp<CR>
 map <F2> :bn<CR>
+
+au BufWritePost .vimrc so ~/.vimrc
+
+let NERDTreeMinimalUI=1
+
+set wildignore+=*/tmp/*,*.so,*.swp.,*.zip,.git/*,*/node_modules/*
+set smartindent
