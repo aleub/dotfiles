@@ -76,14 +76,14 @@ function! StripWhitespace ()
 	call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace ()<CR>
-
+map <leader>n <plug>NERDTreeTabsToggle<CR>
 let coffee_make_options = '--bare -o ../dist/'
 
 " get all .vim/bundle items
 call pathogen#infect()
 
 set background=dark
-colorscheme solarized
+colorscheme base16-default
 " Set a nice Font
 set guifont=Consolas
 
@@ -113,3 +113,5 @@ let NERDTreeMinimalUI=1
 
 set wildignore+=*/tmp/*,*.so,*.swp.,*.zip,.git/*,*/node_modules/*
 set smartindent
+set ttyfast
+set lazyredraw

@@ -58,3 +58,5 @@ zle -N zle-line-finish
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
 alias tmux="tmux -2"
 export TERM=rxvt-256color
+source "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
