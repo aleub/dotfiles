@@ -8,3 +8,10 @@ install: vimrc zshrc Xresources vim
 MY_PWD = `pwd`;
 update: vim
 	for i in `find ~/.vim/bundle/ -maxdepth 1 -mindepth 1 -type d`; do cd $$i; echo $$i\n; git pull; cd $$mypwd; done
+
+uninstall:
+	rm ~/.vimrc
+	rm ~/.zshrc
+	rm ~/.vim
+	rm ~/.Xresources
+	rm ~/.screenrc

@@ -1,10 +1,12 @@
 # Path to your oh-my-zsh configuration.
+#export LANG=de_DE.UTF-8
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+#ZSH_THEME="zhann"
 ZSH_THEME="robbyrussell"
 
 # Example aliases
@@ -57,6 +59,6 @@ zle -N zle-line-finish
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
 alias tmux="tmux -2"
-export TERM=rxvt-256color
-source "$HOME/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export TERM=rxvt-unicode-256color
+#source "$HOME/.rvm/scripts/rvm"
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -1,52 +1,52 @@
 ! urxvt
 Xft.dpi: 96
-Xft.antialias: true
 Xft.hinting:   true
 Xft.hintstyle: hintmedium
 Xft.lcdfilter: lcddefault
-Xft.rgba:      rgb
 
-*utf8: 1
-URxvt*letterSpace: -1
+URxvt*utf8: 1
 URxvt*buffered: true
+!URxvt*letterSpace: -5
 URxvt*cursorBlink: true
 URxvt*underlineColor: yellow
-URxvt*font:  xft:Source Code Pro:style=Regular:pixelsize=14,style=regular,antialias=true
-URxvt*depth: 32
+URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:style=Regular:pixelsize=16,xft:Menlo\ for\ Powerline:style=Bold:pixelsize=16
+!URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:style=Regular:pixelsize=15,xft:Source\ Sans\ Pro:style=Regular:pixelsize=15,xft:Source\ Code\ Pro\ for\ Powerline:style=Regular
+!URxvt*boldFont: xft:Source\ Sans\ Pro:bold:style=Bold:pixelsize=15,xft:Source\ Code\ Pro\ for\ Powerline:style=Regular
+!xft:Terminus:pixelsize=14,xft:Source\ Code\ Pro:pixelsize=14
+!URxvt*font: xft:Consolas:pixelsize=14
+!URxvt*depth: 32
 URxvt*borderless: 1
 URxvt*scrollBar: false
-URxvt*loginShell: true
+
+URxvt*loginShell: false
 Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 URxvt*saveLines: 5000
-URxvt*termName: rxvt-256color
+URxvt*termName: rxvt-unicode-256color
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox
 
 URxvt*keysm.Home: \033[7~
 URxvt*keysm.End: \033[8~
 
-URxvt.depth: 32
 URxvt.matcher.button: 3
 URxvt.iconFile: /usr/share/icons/elementary/apps/128/utilities-terminal.svg
-! Base16 Default
-! Scheme: Chris Kempson (http://chriskempson.com)
 
-*.foreground:   #d0d0d0
-*.background:   #151515
-*.cursorColor:  #d0d0d0
-*.color0:       #151515
-*.color1:       #ac4142
-*.color2:       #90a959
-*.color3:       #f4bf75
-*.color4:       #6a9fb5
-*.color5:       #aa759f
-*.color6:       #75b5aa
-*.color7:       #d0d0d0
-*.color8:       #505050
-*.color9:       #d28445
-*.color10:      #202020
-*.color11:      #303030
-*.color12:      #b0b0b0
-*.color13:      #e0e0e0
-*.color14:      #8f5536
-*.color15:      #f5f5f5
+*foreground:   #c5c8c6
+*background:   #1d1f21
+*cursorColor:  #aeafad
+*color0:       #000000
+*color1:       #912226
+*color2:       #778900
+*color3:       #ae7b00
+*color4:       #1d2594
+*color5:       #682a9b
+*color6:       #2b6651
+*color7:       #929593
+*color8:       #666666
+*color9:       #cc6666
+*color10:      #b5bd68
+*color11:      #f0c674
+*color12:      #81a2be
+*color13:      #b294bb
+*color14:      #8abeb7
+*color15:      #ecebec

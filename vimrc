@@ -83,15 +83,14 @@ let coffee_make_options = '--bare -o ../dist/'
 call pathogen#infect()
 
 set background=dark
-colorscheme base16-default
+colorscheme tomorrow-night
 " Set a nice Font
-set guifont=Consolas
-
-let g:Powerline_symbols='compatible'
+let g:airline_theme="dark"
+"let g:Powerline_symbols='compatible'
 if has("gui_gtk2")
-"let g:Powerline_symbols='fancy'
-"  set guifont=Consolas\ for\ Powerline\ 11
-  set guifont=Source\ Code\ Pro\ 11
+  let g:Powerline_symbols='fancy'
+  let g:airline_powerline_fonts='fancy'
+  set guifont=Source\ Code\ Pro\ for\ Powerline\ 11
 elseif has("gui_macvim")
     set guifont=Consolas:h12
 elseif has("gui_win32")
