@@ -1,6 +1,55 @@
-[submodule "zencoding-vim"]
-  path = vim/bundle/zencoding-vim
-  url = git://github.com/mattn/zencoding-vim.git
+[submodule "Ack.vim"]
+  path = vim/bundle/ack.vim
+  url = https://github.com/mileszs/ack.vim.git
+
+[submodule "tern_for_vim"]
+  path = vim/bundle/tern_for_vim
+  url = https://github.com/ternjs/tern_for_vim.git
+
+[submodule "vim-airline"]
+  path = vim/bundle/vim-airline
+  url = https://github.com/bling/vim-airline.git
+
+[submodule "vim-classpath"]
+  path = vim/bundle/vim-classpath
+  url = https://github.com/tpope/vim-classpath.git
+
+[submodule "vim-javascript"]
+  path = vim/bundle/vim-javascript
+  url = https://github.com/pangloss/vim-javascript.git
+
+[submodule "vim-jsx"]
+  path = vim/bundle/vim-jsx
+  url = https://github.com/mxw/vim-jsx.git
+
+[submodule "vim-javascript-syntax"]
+  path = vim/bundle/vim-javascript-syntax
+  url = https://github.com/jelera/vim-javascript-syntax.git
+
+[submodule "vim-fireplace"]
+  path = vim/bundle/vim-fireplace
+  url = https://github.com/tpope/vim-fireplace.git
+
+[submodule "vim-clojure-static"]
+  path = vim/bundle/vim-clojure-static
+  url = https://github.com/guns/vim-clojure-static.git
+
+[submodule "vim-blade"]
+  path = vim/bundle/vim-blade
+  url = https://github.com/jwalton512/vim-blade.git
+
+[submodule "csapprox"]
+  path = vim/bundle/syntastic
+  url = https://github.com/godlygeek/csapprox.git
+
+[submodule "sytastic"]
+  path = vim/bundle/csapprox
+  url = https://github.com/scrooloose/syntastic.git
+
+[submodule "emmet-vim"]
+  path = vim/bundle/emmet-vim
+  url = https://github.com/mattn/emmet-vim.git
+
 
 [submodule "TabBar"]
   path = vim/bundle/TabBar
