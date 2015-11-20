@@ -1,4 +1,5 @@
 " Make vim more useful
+call pathogen#infect()
 set nocompatible
 " Enhance command-line completion
 set wildmenu
@@ -8,11 +9,12 @@ set esckeys
 set ttyfast
 " Add the g flag to search/replace by default
 set gdefault
-filetype plugin on
+filetype plugin indent on
+
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 " Change mapleader
-let mapleader=","
+let mapleader=" "
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -26,9 +28,9 @@ syntax on
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 " Expand Tab to spaces
 set expandtab
 " Show “invisible” characters
@@ -80,22 +82,28 @@ map <leader>n <plug>NERDTreeTabsToggle<CR>
 let coffee_make_options = '--bare -o ../dist/'
 
 " get all .vim/bundle items
-call pathogen#infect()
 
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
 set background=dark
-colorscheme tomorrow-night
+colorscheme base16-tomorrow
 " Set a nice Font
-let g:airline_theme="dark"
+let g:airline_theme="tomorrow"
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
 "let g:Powerline_symbols='compatible'
+set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
 if has("gui_gtk2")
-  let g:Powerline_symbols='fancy'
-  let g:airline_powerline_fonts='fancy'
-  set guifont=Source\ Code\ Pro\ for\ Powerline\ 11
+  let g:airline_powerline_fonts=1
+  set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
 elseif has("gui_macvim")
     set guifont=Consolas:h12
 elseif has("gui_win32")
     set guifont=Consolas:h11
 end
+
+let g:syntastic_javascript_checkers = ['eslint']
 
 " no gui toolbar
 set guioptions-=T
@@ -106,11 +114,14 @@ set guioptions-=m
 map <F1> :bp<CR>
 map <F2> :bn<CR>
 
-au BufWritePost .vimrc so ~/.vimrc
+map <leader>h :bp<CR>
+map <leader>l :bn<CR>
+
+"au BufWritePost .vimrc so ~/.vimrc
 
 let NERDTreeMinimalUI=1
 
 set wildignore+=*/tmp/*,*.so,*.swp.,*.zip,.git/*,*/node_modules/*
 set smartindent
-set ttyfast
 set lazyredraw
+set hidden
